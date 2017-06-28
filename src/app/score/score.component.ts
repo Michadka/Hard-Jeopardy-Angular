@@ -11,21 +11,16 @@ export class ScoreComponent implements OnInit {
 @Input() question;
 catChoice: string;
 releventCategory:string;
+releventAnswer:string;
 
 submit(catChoice){
   this.releventCategory = catChoice;
 }
 
-    btn(){
-      this.JeopardyDataService.getRecords()
-        .subscribe(
-          questions => {
-            this.question = questions; 
-            //console.log(this.questions);
-            // this.successMessage = "got stuff"
-          }
-        );
-    }
+response(answer){
+  this.releventAnswer = answer;
+  console.log(this.releventAnswer)
+}
 
 
  constructor(private JeopardyDataService: JeopardyService) { }
