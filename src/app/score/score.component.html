@@ -1,7 +1,7 @@
 <div id="content">
   <table class="table table-striped">
     <tr>
-      <td *ngFor="let category of question"><div align="center"><button (click)="submit(category.category?.title)"  class="btn-lg btn-primary category">{{category.category?.title}}</button></div></td>
+      <td *ngFor="let category of question"><div align="center"><button (click)="submit(category.category?.title, category.answer, category.value)"  class="btn-lg btn-primary category">{{category.category?.title}}</button></div></td>
     </tr>
     <tr>
       <td *ngFor="let category of question"><div align="center"><span class="value">{{category.value}}</span></div></td>
@@ -9,17 +9,19 @@
     <tr>
       <td *ngFor="let category of question"><div align="center"><span *ngIf="releventCategory == category.category?.title" class="boardQuestion">{{category.question}}</span></div></td>
     </tr>
-    <tr>
+    <!--<tr>
       <td *ngFor="let category of question"><div align="center"><span class="boardAnswer">{{category.answer}}</span></div></td>
-    </tr>
+    </tr>-->
  </table >
 
 
   <div align="center">
-      <input [(ngModel)]="answer"/>
+      <input id="userInput" [(ngModel)]="answer">
       <button (click)="response(answer)" id="submit-button" type="button" class="btn btn-primary btn-lg">Submit</button>
   </div>
 </div>
   <br/>
+{{yourScore}}<br/>
+{{resultMessage}}
 
 

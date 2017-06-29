@@ -7,5 +7,5 @@
 </div>
 <h2 align="center">This is where some shit can go if needed!</h2>
 <!--<div>Data should be here: {{question.question}}</div>-->
-<app-score [question]="question"></app-score>
+<app-score [question]="question" (refresh)="getQuestion()"></app-score>
 
