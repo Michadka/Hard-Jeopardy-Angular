@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
+/** {
+    border: 1px dashed yellow;
+}*/
+
 body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: azure;
+    background-color: #2a3698;
 }

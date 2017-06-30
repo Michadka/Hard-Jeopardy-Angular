@@ -17,20 +17,37 @@ input[type=text]:focus {
     width: 25%;
 }
 
-button {
+
+td button {
     margin: 10px;
+    color: #ffff5f;
+    background-color: #2a3698;
+    border: 2px solid black;
+    text-transform: uppercase;
+}
+
+td button:hover {
+    transform: scale(1.5);
+    transition: 0.5s ease;
 }
 
 span {
     font-size: 20px;
 }
 
+td {
+    color: #ffff5f;
+}
 
-/*the below is no longer needed*/
-/*p {
+#answerReaction {
+    color: white;
     font-size: 20px;
 }
 
-#title {
-    font-weight: bold;
-}*/
+#question{
+    text-align: center;
+}
+
+tr td {
+    border: none;
+}

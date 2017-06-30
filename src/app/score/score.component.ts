@@ -46,6 +46,7 @@ response(rcdAnswer){
   this.refresh.emit();
 }
 
+
  constructor(private JeopardyDataService: JeopardyService) { }
 
   ngOnInit() {

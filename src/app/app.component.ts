@@ -9,7 +9,7 @@ import { JeopardyService } from './jeopardy.service';
 })
 export class AppComponent {
   
-  title = 'Jeopardy with Angular';
+  title = 'with Angular';
   question: object[] = [];
   errorMessage: string;
 

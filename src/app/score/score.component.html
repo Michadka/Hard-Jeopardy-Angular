@@ -1,26 +1,25 @@
 <div id="content">
-  <table class="table table-striped">
+  <table class="table table-sm">
     <tr>
-      <td *ngFor="let category of question"><div align="center"><button (click)="submit(category.category?.title, category.answer, category.value)"  class="btn-lg btn-primary category">{{category.category?.title}}</button></div></td>
+      <td *ngFor="let category of question"><div><button id="catButton" (click)="submit(category.category?.title, category.answer, category.value)"  class="btn-lg btn-primary category">{{category.category?.title}}</button></div></td>
     </tr>
     <tr>
-      <td *ngFor="let category of question"><div align="center"><span class="value">{{category.value}}</span></div></td>
+      <td *ngFor="let category of question"><div><span class="value">{{category.value}}</span></div></td>
     </tr>
     <tr>
-      <td *ngFor="let category of question"><div align="center"><span *ngIf="releventCategory == category.category?.title" class="boardQuestion">{{category.question}}</span></div></td>
+      <td id="question" *ngFor="let category of question"><div><span *ngIf="releventCategory == category.category?.title" class="boardQuestion">{{category.question}}</span></div></td>
     </tr>
-    <!--<tr>
-      <td *ngFor="let category of question"><div align="center"><span class="boardAnswer">{{category.answer}}</span></div></td>
-    </tr>-->
  </table >
 
 
   <div align="center">
-      <input id="userInput" [(ngModel)]="answer">
+      <input id="userInput" [(ngModel)]="answer" type="text" placeholder="Who is...">
       <button (click)="response(answer)" id="submit-button" type="button" class="btn btn-primary btn-lg">Submit</button>
   </div>
 </div>
   <br/>
-{{yourScore}}<br/>
-{{resultMessage}}
+  <div id="answerReaction">
+    <p>Your Score: {{yourScore}}<br/>
+       {{resultMessage}}</p>
+  </div>
 
