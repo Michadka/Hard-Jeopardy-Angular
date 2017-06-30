@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+}
+
+#hero {
+    background-image: linear-gradient(to right, black 0%,white 100%), url("../assets/banner-bg.jpg");
+    /*background-color: red;*/
+    background-blend-mode: overlay;
+    /*max-width: 100%;
+    max-height: 100%;*/
+    position: relative;
+    margin-bottom: 3%;
+    padding: 2%;
+}
+
+img {
+    mix-blend-mode: multiply;
+}
+
+/*"./assets/jeopardy.jpeg"*/
